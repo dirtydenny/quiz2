@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Coding Quiz</title>
+</head>
+
+<body>
+  <!-- this is the startpage -->
+  <header>
+    <div class="font-size:large">Coding Quiz</div>
+    <h1>Timer <span id="timer"></span></h1>
+    <button class="start-button">Start</button>
+  </header>
+  <!-- <button onclick="Button-A()">Click Me</button> --->
+  <main>
+    <div id="startpage">
+      <div id="rules-box" class="medium-font">Code Quiz Rules. <p>Use the mouse to click the correct. Guess wrong and deduct 10 seconds.
+          Guess right and lose no time.
+          </p>
+        </div>
+    </div>
+
+    
+    <div id ="questionpage"class="hide">
+         <h2 id ="quizQuestionAnswer-question"</h2>
+          <div id="options" class="options>"</div>
+      </div>    
+        
+    <div id="endpage" class="hide">
+      <h2>Enter Initials</h2>
+      <form>
+        <li>
+          <label for="initals">Initials</label>
+          <textarea id="initials" name="comments"></textarea>
+        </li>
+
+      </form> <!-- this is the endpage -->
+      <button id="save">SAVE</button>
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
+</html>

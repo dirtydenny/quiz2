@@ -1,0 +1,229 @@
+<<<<<<< HEAD
+* { box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: aquamarine;
+  color:#003263;
+  /* display: flex;
+  justify-content: flex-start; */
+  background: #C4CED4; 
+}
+
+.reset-button{
+  font-size: 14px;
+  height: 25px;
+  line-height: 8px;
+  margin-top: 20px;
+  font-weight: 900;
+}
+
+.current-score-container {
+  display: flex;
+  Justify-content:space-between;
+  margin-top:auto;
+}
+
+
+li {
+  list-style:none;
+  margin-top: 25px;
+  display: block;
+}
+
+button {
+  background-color: silver;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  font-size: 1.3em;
+  letter-spacing: .21px;
+  line-height: 20px;
+  max-width: 255px;
+  padding: 20px 50px;
+  transition-duration: 0.15s;
+  transition-property: background-color;
+  transition-timing-function: linear;
+  margin-top: 0.6em;
+}
+
+header {
+  margin-bottom: 10rem;
+
+  padding: 40px;
+  text-align: center;
+  background: #003263;
+  color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+main {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: 
+  space-around; */
+}
+
+section {
+  flex: 0 auto;
+  padding: 8px;
+  margin-top: 50px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+#rules-box {
+  
+  text-align: center;
+}
+
+#question-answer-container{ 
+  text-align: center;
+
+}
+
+.results {
+  width: 30vw;
+  height: 400px;
+}
+
+.card {
+  background: radial-gradient(circle,#C4CED4);
+  border: 2px solid #003263;
+  border-radius: 30px;
+  box-shadow: #ba0021;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.endpage{
+  display: none;
+}
+
+=======
+* { box-sizing: border-box;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: aquamarine;
+  color:#003263;
+  /* display: flex;
+  justify-content: flex-start; */
+  background: #C4CED4; 
+}
+
+.reset-button{
+  font-size: 14px;
+  height: 25px;
+  line-height: 8px;
+  margin-top: 20px;
+  font-weight: 900;
+}
+
+.current-score-container {
+  display: flex;
+  Justify-content:space-between;
+  margin-top:auto;
+}
+
+
+li {
+  list-style:none;
+  margin-top: 25px;
+  display: block;
+}
+
+button {
+  background-color: silver;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  font-size: 1.3em;
+  letter-spacing: .21px;
+  line-height: 20px;
+  max-width: 255px;
+  padding: 20px 50px;
+  transition-duration: 0.15s;
+  transition-property: background-color;
+  transition-timing-function: linear;
+  margin-top: 0.6em;
+}
+
+header {
+  margin-bottom: 10rem;
+
+  padding: 40px;
+  text-align: center;
+  background: #003263;
+  color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+main {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: 
+  space-around; */
+}
+
+section {
+  flex: 0 auto;
+  padding: 8px;
+  margin-top: 50px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+#rules-box {
+  
+  text-align: center;
+}
+
+#question-answer-container{ 
+  text-align: center;
+
+}
+
+.results {
+  width: 30vw;
+  height: 400px;
+}
+
+.card {
+  background: radial-gradient(circle,#C4CED4);
+  border: 2px solid #003263;
+  border-radius: 30px;
+  box-shadow: #ba0021;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.endpage{
+  display: none;
+}
+
+>>>>>>> 5f0dad9133ca296942feaa40400aa512d83944da
