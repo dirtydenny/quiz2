@@ -20,21 +20,21 @@ function startQuiz() {
   getQuestion();
 }
 
-function getQuestion() {
-  var currentQuestion = quizQuestionAnswer[currentQuestionIndex];
+// function getQuestion() {
+//   var currentQuestion = quizQuestionAnswer[currentQuestionIndex];
 
-  var questionEl = document.getElementById("quizQuestionAnswer-question");
-  questionsEl.textConent = currentQuestion.question;
-  choicesEl.innerHTML = "";
+//   var questionEl = document.getElementById("quizQuestionAnswer-question");
+//   questionsEl.textConent = currentQuestion.question;
+//   choicesEl.innerHTML = "";
 
-  for (var i = 0; i < currentQuestion.question.options.length; i++) {
-    var choice = currentQuestion.choices[i];
-    var choiceNode = document.createElement("button");
-    choiceNode.setAttribute("class", "choice");
+//   for (var i = 0; i < currentQuestion.question.options.length; i++) {
+//     var choice = currentQuestion.choices[i];
+//     var choiceNode = document.createElement("button");
+//     choiceNode.setAttribute("class", "choice");
 
-    choicesEl.appendChild(choiceNode);
-  }
-}
+//     choicesEl.appendChild(choiceNode);
+//   }
+// }
 
 // if (!buttonEl.matches("choice")) {
 //   /return;
@@ -122,38 +122,39 @@ function renderQuestion() {
   document.getElementById("rules-box").innerHTML = "<h2>";
   // render questions here
 }
-function questionClick(event) {
-  var buttonEl = event.target;
+// function questionClick(event) {
+//   var buttonEl = event.target;
 
-  if (!buttonEl.matches(".choice")) {
-    return;
-  }
+//   if (!buttonEl.matches(".choice")) {
+//     return;
+//   }
 
-  if (buttonEl.value !== questions[currentQuestionIndex].answer) {
-    time -= 10;
-    if (time < 0) {
-      time = 0;
-    }
+//   if (buttonEl.value !== questions[currentQuestionIndex].answer) {
+//     time -= 10;
+//     if (time < 0) {
+//       time = 0;
+//     }
 
-    alert("Wrong");
-  } else {
-    alert("Correct");
-  }
-  currentQuestionIndex++;
+//     alert("Wrong");
+//   } else {
+//     alert("Correct");
+//   }
+//   currentQuestionIndex++;
 
-  if (time <= 0 || currentQuestionIndex === questions.length) {
-    quizEnd();
-  } else {
-    getQuestion();
-  }
-}
+//   if (time <= 0 || currentQuestionIndex === questions.length) {
+//     quizEnd();
+//   } else {
+//     getQuestion();
+//   }
+// }
+
 startButton.addEventListener("click", function () {
   secondsLeft = 100;
   startButton.disabled = true;
   setTime();
   //startQuiz();
   renderQuestion();
-});
+})
 
 //setTime();
 
