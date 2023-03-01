@@ -17,7 +17,7 @@ function startQuiz() {
   timerId = setinterval(clockTick, 1000);
   timerEl.textConent = time;
 
-  getQuestion();
+  // getQuestion();
 }
 
 // function getQuestion() {
@@ -107,20 +107,34 @@ function renderQuestion() {
 
     var questionEl = document.getElementById("quizQuestionAnswer-question");
     var choicesEl = document.getElementById("options");
+    choicesEl.innerHTML = "";
     questionEl.textContent = currentQuestion.question;
-document.getElementById("questionpage").append(choicesEl);
+    // document.getElementById("questionpage").append(choicesEl);
     for (var i = 0; i < currentQuestion.options.length; i++) {
       var choice = currentQuestion.options[i];
       var choiceNode = document.createElement("button");
       choiceNode.setAttribute("class", "choice");
-      choiceNode.textContent = choice;
-      choiceNode.textConent = i + 1 + ". " + choice;
+      choiceNode.dataset.value = choice;
+      // choiceNode.textContent = choice;
+      choiceNode.textContent = i + 1 + ". " + choice;
       choicesEl.appendChild(choiceNode);
     }
   }
   document.getElementById("rules-box").innerHTML = "<h2>";
   // render questions here
 }
+
+document.getElementById("options").addEventListener("click", function (event) {
+  if (event.target.className === "choice") {
+    // code to verify correct/incorrect answer goes here...
+    console.log(event.target.dataset.value);
+
+    var chosenAnswer = event.target.dataset.value;
+    
+    currentQuestionIndex++;
+    renderQuestion();
+  }
+});
 // function questionClick(event) {
 //   var buttonEl = event.target;
 
@@ -153,7 +167,7 @@ startButton.addEventListener("click", function () {
   setTime();
   //startQuiz();
   renderQuestion();
-})
+});
 
 //setTime();
 
