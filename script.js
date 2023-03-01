@@ -4,6 +4,7 @@ let currentQuestionIndex = 0;
 // let timerId;
 
 var startButton = document.getElementById("start-button");
+var initials = document.querySelector('#initials')
 //var resetButton = document.getElementById
 //("reset-button")
 
@@ -133,10 +134,10 @@ document.getElementById("options").addEventListener("click", function (event) {
     console.log(event.target.dataset.value);
 
     var chosenAnswer = event.target.dataset.value;
-    if (chosenAnswer.value !== questions[currentQuestionIndex].answer) {
-      time -= 20;
-      if (time < 0) {
-        time = 0;
+    if (chosenAnswer.value !== quizQuestionAnswer[currentQuestionIndex].answer) {
+      secondsLeft -= 20;
+      if (secondsLeft < 0) {
+        secondsLeft = 0;
       }
 
       alert("Wrong");
@@ -147,6 +148,12 @@ document.getElementById("options").addEventListener("click", function (event) {
     renderQuestion();
   }
 });
+
+quizEnd(
+
+
+
+  
 // function questionClick(event) {
 //   var buttonEl = event.target;
 
