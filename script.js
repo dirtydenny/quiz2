@@ -127,10 +127,22 @@ function renderQuestion() {
 document.getElementById("options").addEventListener("click", function (event) {
   if (event.target.className === "choice") {
     // code to verify correct/incorrect answer goes here...
+    
+    
+    //
     console.log(event.target.dataset.value);
 
     var chosenAnswer = event.target.dataset.value;
-    
+    if (chosenAnswer.value !== questions[currentQuestionIndex].answer) {
+      time -= 20;
+      if (time < 0) {
+        time = 0;
+      }
+
+      alert("Wrong");
+    } else {
+      alert("Correct");
+    }
     currentQuestionIndex++;
     renderQuestion();
   }
