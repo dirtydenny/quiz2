@@ -108,8 +108,7 @@ function renderQuestion() {
     var questionEl = document.getElementById("quizQuestionAnswer-question");
     var choicesEl = document.getElementById("options");
     questionEl.textContent = currentQuestion.question;
-    choicesEl.innerHTML = "";
-
+document.getElementById("questionpage").append(choicesEl);
     for (var i = 0; i < currentQuestion.options.length; i++) {
       var choice = currentQuestion.options[i];
       var choiceNode = document.createElement("button");
