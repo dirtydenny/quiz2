@@ -59,7 +59,7 @@ var quizQuestionAnswer = [
     answer: "Hyper Text Makeup Language",
   },
   {
-    question: "What Does HTML stand for?",
+    question: "What does the DOM stand for?",
     options: [
       "Hyper Toddlers Moms Lunch",
       "Hyper Text Makeup Language",
@@ -134,7 +134,7 @@ document.getElementById("options").addEventListener("click", function (event) {
     console.log(event.target.dataset.value);
 
     var chosenAnswer = event.target.dataset.value;
-    if (chosenAnswer.value !== quizQuestionAnswer[currentQuestionIndex].answer) {
+    if (chosenAnswer !== quizQuestionAnswer[currentQuestionIndex].answer) {
       secondsLeft -= 20;
       if (secondsLeft < 0) {
         secondsLeft = 0;
