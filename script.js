@@ -61,12 +61,12 @@ var quizQuestionAnswer = [
   {
     question: "What does the DOM stand for?",
     options: [
-      "Hyper Toddlers Moms Lunch",
-      "Hyper Text Makeup Language",
-      "Hilarious Texting Mixes Languges",
-      "High Tech Modual License",
-    ],
-    answer: "Hyper Text Makeup Language",
+      "District Office Mananger",
+      "Document Object Model",
+      "Disturbing Occupational Laceration",
+      "Dasturdly Objectifying Letch",
+    ],  
+    answer: "Document Object Model",
   },
   {
     question: "A Boolean is defined as ture or false?",
@@ -79,6 +79,8 @@ var quizQuestionAnswer = [
     answer: "True",
   },
 ];
+
+
 
 let timeEl = document.querySelector("#timer");
 // selects element by id
@@ -145,11 +147,31 @@ document.getElementById("options").addEventListener("click", function (event) {
       alert("Correct");
     }
     currentQuestionIndex++;
-    renderQuestion();
+    
+    if (secondnLeft<= 0 || currentQuestionIndex === optons.length)  {
+quizEnd()    
+    }
+    
+    
+    
+    renderQuestion()
   }
-});
+})
 
-//quizEnd()
+
+function quizEnd() {
+        clearInterval(TimerId);
+{
+
+startButton.addEventListener("click", function () {
+  secondsLeft = 100;
+  startButton.disabled = true;
+  setTime();
+  //startQuiz();
+  renderQuestion();
+})
+
+
 
 // saveButton.addEventListener("click",function(event)preventDefault();
 
@@ -183,14 +205,6 @@ document.getElementById("options").addEventListener("click", function (event) {
 //     getQuestion();
 //   }
 // }
-
-startButton.addEventListener("click", function () {
-  secondsLeft = 100;
-  startButton.disabled = true;
-  setTime();
-  //startQuiz();
-  renderQuestion();
-});
 
 //setTime();
 
@@ -249,4 +263,5 @@ console.log(seconds);
     }
 
 */
-// how do I grab my question/answer data and display it?
+// how do I grab my question/answer data and display it?;
+//;
