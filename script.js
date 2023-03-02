@@ -5,8 +5,12 @@ let currentQuestionIndex = 0;
 
 var startButton = document.getElementById("start-button");
 var initials = document.querySelector('#initials')
-var endPageEl= document.getElementById('#end-page')
 
+var startpageEl = document.getElementById("startpage");
+var rulesBoxEl = document.getElementById("rules-box");
+var questionsEl = document.getElementById("questionpage");
+var endPageEl = document.getElementById("end-page");
+var resultsPage = document.getElementById("results-page");
 
 //var resetButton = document.getElementById
 //("reset-button")
@@ -15,17 +19,7 @@ var endPageEl= document.getElementById('#end-page')
 
 
 
-function startQuiz() {
-  var startpageEl = document.getElementById("startpage");
-  startpageEl.setAttribute("class", "hide");
-  rulesBoxEl.setAttribute("class", "hide");
-  endPageEl.setAttribute("class", "hide");
-  questionsEl.removeAttribute("class");
-  timerId = setinterval(clockTick, 1000);
-  timerEl.textConent = time;
 
-  // getQuestion();
-}
 
 // function getQuestion() {
 //   var currentQuestion = quizQuestionAnswer[currentQuestionIndex];
@@ -135,6 +129,7 @@ function renderQuestion() {
 
 document.getElementById("options").addEventListener("click", function (event) {
   if (event.target.className === "choice") {
+    
     // code to verify correct/incorrect answer goes here...
     
     
@@ -160,7 +155,16 @@ document.getElementById("options").addEventListener("click", function (event) {
     
     
     
-    renderQuestion()
+    if (currentQuestionIndex < 4) {
+      renderQuestion();
+    } else {
+      console.log("should not be runing");
+      startpageEl.setAttribute("class", "hide");
+      rulesBoxEl.setAttribute("class", "hide");
+      questionsEl.setAttribute("class", "hide");
+      endPageEl.removeAttribute("class", "hide");
+    }
+
   }
 })
 
@@ -169,27 +173,40 @@ function quizEnd() {
         clearInterval(TimerId);
 
 }
-startButton.addEventListener("click", function () {
+startButton.addEventListener("click", function ()   { 
+  startpageEl.setAttribute("class", "hide");
+  rulesBoxEl.setAttribute("class", "hide");
+  questionsEl.removeAttribute("class", "hide");
+
   secondsLeft = 100;
   startButton.disabled = true;
   setTime();
   //startQuiz();
   renderQuestion();
 });
+
 var saveButton = document.getElementById("save-button")
-saveButton.addEventListener("click", function(event) {event.preventDefault()
+saveButton.addEventListener("click", function(event) {event.preventDefault();
 // document.getElementById.("initials").innerHTML = 
-localStorage.setItem("initials", initials.value)
-console.log(initials);
-
-startpageEl.setAttribute("class", "hide");
-rulesBoxEl.setAttribute("class", "hide");
-questionsEl.setAttribute("class", "hide");
-endpageEl.removeAttribute("class");
-
-
+var initails = [];
 })
 
+
+
+//saveButton.addEventListener("click", function (event) {
+  // event.preventDefault();
+
+  // var initails = [];
+
+  // get initials from local storage and put them in a variable called initails.
+
+  // if initials then push user input into initials array
+
+  // else then initails = [userinput];
+
+  // set initials into local storage
+
+  /
 
 
 
