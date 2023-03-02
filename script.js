@@ -14,7 +14,7 @@ var initials = document.querySelector('#initials')
 
 function startQuiz() {
   var startpageEl = document.getElementById("startpage");
-  startpageel.setAttribute("class", "hide");
+  startpageEl.setAttribute("class", "hide");
   rulesBoxEl.setAttribute("class", "hide");
   questionsEl.removeAttribute("class");
   timerId = setinterval(clockTick, 1000);
@@ -171,7 +171,21 @@ startButton.addEventListener("click", function () {
   setTime();
   //startQuiz();
   renderQuestion();
+});
+
+saveButton.addEventListener("click", function(event) {event.preventDefault()
+// document.getElementById.("initials").innerHTML = 
+localStorage.setItem("initials", "intials")
+console.log(initials);
 })
+
+
+
+
+
+  
+  
+
 
 
 
