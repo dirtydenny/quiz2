@@ -161,8 +161,8 @@ quizEnd()
 
 function quizEnd() {
         clearInterval(TimerId);
-{
 
+}
 startButton.addEventListener("click", function () {
   secondsLeft = 100;
   startButton.disabled = true;
@@ -264,4 +264,4 @@ console.log(seconds);
 
 */
 // how do I grab my question/answer data and display it?;
-//;
+//
