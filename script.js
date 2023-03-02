@@ -5,6 +5,9 @@ let currentQuestionIndex = 0;
 
 var startButton = document.getElementById("start-button");
 var initials = document.querySelector('#initials')
+var endPageEl= document.getElementById('#end-page')
+
+
 //var resetButton = document.getElementById
 //("reset-button")
 
@@ -16,6 +19,7 @@ function startQuiz() {
   var startpageEl = document.getElementById("startpage");
   startpageEl.setAttribute("class", "hide");
   rulesBoxEl.setAttribute("class", "hide");
+  endPageEl.setAttribute("class", "hide");
   questionsEl.removeAttribute("class");
   timerId = setinterval(clockTick, 1000);
   timerEl.textConent = time;
@@ -172,11 +176,18 @@ startButton.addEventListener("click", function () {
   //startQuiz();
   renderQuestion();
 });
-
+var saveButton = document.getElementById("save-button")
 saveButton.addEventListener("click", function(event) {event.preventDefault()
 // document.getElementById.("initials").innerHTML = 
-localStorage.setItem("initials", "intials")
+localStorage.setItem("initials", initials.value)
 console.log(initials);
+
+startpageEl.setAttribute("class", "hide");
+rulesBoxEl.setAttribute("class", "hide");
+questionsEl.setAttribute("class", "hide");
+endpageEl.removeAttribute("class");
+
+
 })
 
 
