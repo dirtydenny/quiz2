@@ -10,6 +10,8 @@ var initials = document.querySelector('#initials')
 
 // const sfxPlay = const Audio(''
 
+
+
 function startQuiz() {
   var startpageEl = document.getElementById("startpage");
   startpageel.setAttribute("class", "hide");
@@ -148,9 +150,9 @@ document.getElementById("options").addEventListener("click", function (event) {
     }
     currentQuestionIndex++;
     
-    if (secondnLeft<= 0 || currentQuestionIndex === optons.length)  {
-quizEnd()    
-    }
+    //if (secondsLeft<= 0 || currentQuestionIndex === optons.length){
+//quizEnd()    
+    
     
     
     
