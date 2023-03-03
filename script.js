@@ -191,7 +191,7 @@ saveButton.addEventListener("click", function(event) {event.preventDefault();
 var initails = [];
 })
 
-
+var hscores = JSON 
 
 //saveButton.addEventListener("click", function (event) {
   // event.preventDefault();
