@@ -189,9 +189,9 @@ var saveButton = document.getElementById("save-button")
 saveButton.addEventListener("click", function(event) {event.preventDefault();
 // document.getElementById.("initials").innerHTML = 
 var initails = [];
-})
+});
 
-var hscores = JSON 
+
 
 //saveButton.addEventListener("click", function (event) {
   // event.preventDefault();
@@ -206,106 +206,4 @@ var hscores = JSON
 
   // set initials into local storage
 
-  /
 
-
-
-
-  
-  
-
-
-
-
-// saveButton.addEventListener("click",function(event)preventDefault();
-
-// )
-
-
-
-
-// function questionClick(event) {
-//   var buttonEl = event.target;
-
-//   if (!buttonEl.matches(".choice")) {
-//     return;
-//   }
-
-//   if (buttonEl.value !== questions[currentQuestionIndex].answer) {
-//     time -= 10;
-//     if (time < 0) {
-//       time = 0;
-//     }
-
-//     alert("Wrong");
-//   } else {
-//     alert("Correct");
-//   }
-//   currentQuestionIndex++;
-
-//   if (time <= 0 || currentQuestionIndex === questions.length) {
-//     quizEnd();
-//   } else {
-//     getQuestion();
-//   }
-// }
-
-//setTime();
-
-//1. wait for click event on start button
-//2. startquiz()
-//- reset all the var
-//- start the timer
-//- display question
-//  counts down from 100 seconds
-//
-
-/*const quizQuestionAnswer1 = [
-  ,
-  "A.  Hyper Toddlers Moms Lunch",
-  "B.  Hyper Text Makeup Language",
-  "C.  Hilarious Texting Mixes Languges",
-  "D.  High Tech Modual License",
-];
-const quizQuestionAnswer2 = [
-x  "What does the DOM stand for?",
-  "A.  District Office Mananger",
-  "B.  Document Object Model",
-  "C.  Disturbing Occupational Laceration",
-  "D.  Dasturdly Objectifying Letch",
-];
-
-let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-document.getElementById("seconds").innerHTML = seconds;
-
-console.log(seconds);
-
-/* Variable log--
-
-  quizQuestionAnswer1
-  quizQuestionAnswer2
-  seconds */
-
-/* Start
-  Page with start button:  Action-press (click event) button to start quiz.
-  display first question, create a listening event to check for the correct key, we're using B as the right answer.
-  add points if right subtract seconds if wrong, add points to aggregate score.
-  list conestants score in high score page.
-
-  */
-
-/*<div id="Button-A">
-    This is my DIV element.
-    function Button-A() {
-    var x = document.getElementById("Button-A");
-    if (x.style.display === "none") {
-    x.style.display = "block";
-    } else {
-    x.style.display = "none";
-    }
-    }
-
-*/
-// how do I grab my question/answer data and display it?;
-//
